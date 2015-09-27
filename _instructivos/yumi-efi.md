@@ -22,7 +22,7 @@ Testeadas en las netbooks EXO X352 (32 bits) y CORADIR CDR Class (64 bits uefi):
 
 * Bajar la última versión de [YUMI](http://www.pendrivelinux.com/yumi-multiboot-usb-creator/) para Windows (La versión para linux es problemática, no la recomiendo).
 
-* Bajar el siguiente archivo [yumi_raiz_efi](/ars-me-cba/public/archivos/archivos/yumi_efi_raiz.zip).
+* Bajar el siguiente archivo [yumi_raiz_efi](/ars-me-cba/public/archivos/yumi_efi_raiz.zip).
 
 ---
 
