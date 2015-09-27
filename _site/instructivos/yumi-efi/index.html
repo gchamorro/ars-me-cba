@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Yumi EFI &middot; ars.me.cba
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/ars-me-cba/public/css/poole.css">
+  <link rel="stylesheet" href="/ars-me-cba/public/css/syntax.css">
+  <link rel="stylesheet" href="/ars-me-cba/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ars-me-cba/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/ars-me-cba/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/ars-me-cba/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <!--<a class="sidebar-nav-item" href="/ars-me-cba/about/">Acerca de</a>-->
+        
+      
+    
+      
+    
+      
+        
+      
+    
+
+    <!--</-><a class="sidebar-nav-item" href="/archive/v.zip">Download</a>-->
+    <a class="sidebar-nav-item" href="/ars-me-cba/instructivos/">Instructivos</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <!--<p>
+      &copy; 2015. All rights reserved.
+    </p>-->
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/ars-me-cba/" title="Home">ars.me.cba</a>
+            <small>Administradores de Red . Ministerio de Educación .  Córdoba</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <!--<h1 class="post-title">Yumi EFI</h1>-->
+  <h1 id="iumi--uendous-8-uefi--rescatus--uaira">Iumi + uendous 8 (uefi) + rescatus + uaira</h1>
+
+<p>Instalar con yumi las versiones tanto de 32 bits como de 64 bits uefi de las herramientas que necesitamos, booteables en ambas arquitecturas en un único pendrive.</p>
+
+<p>Testeadas en las netbooks EXO X352 (32 bits) y CORADIR CDR Class (64 bits uefi):</p>
+
+<ul>
+  <li>Huayra 3.1 amd64</li>
+  <li>Gparted 0.23.0-1-amd64</li>
+  <li>Clonezilla 2.4.2-32-amd64</li>
+  <li>Rescatux i386_amd64-486_0.30.2</li>
+</ul>
+
+<hr />
+
+<h2 id="obtener-el-software-necesario">1. Obtener el software necesario</h2>
+
+<ul>
+  <li>
+    <p>Bajar las imágenes iso de cada una de las herramientas, en este caso utilizamos solo las de 64 bits de <a href="http://www.clonezilla.org/downloads.php">Clonezilla</a>, <a href="http://sourceforge.net/projects/gparted/files/gparted-live-stable/">GParted</a> y <a href="http://huayra.conectarigualdad.gob.ar/iso-sistema#block-views-isos-menu-iso-ultima-estable">Huayra GNU/Linux</a>, ya que se ejecutan en ambas arquitecturas. La imagen de <a href="http://www.supergrubdisk.org/category/download/rescatuxdownloads/rescatux-stable/]">Rescatux</a> es híbrida en arquitectura.</p>
+  </li>
+  <li>
+    <p>Bajar la última versión de <a href="http://www.pendrivelinux.com/yumi-multiboot-usb-creator/">YUMI</a> para Windows (La versión para linux es problemática, no la recomiendo).</p>
+  </li>
+  <li>
+    <p>Bajar el siguiente archivo <a href="https://drive.google.com/file/d/0B_pDv9cL1hOLRWJKOWlpaUFmb3M/view?usp=sharing">yumi_raiz_efi</a>.</p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="instalacin">2. Instalación</h2>
+
+<p>Instalar normalmente las imágenes iso en YUMI tanto de Clonezilla como de GParted.</p>
+
+<h3 id="rescatux">Rescatux</h3>
+
+<p>Rescatux se compone de una iso dentro de otra. Extraer la imagen iso dentro de la imagen iso. Valga el trabalenguas.</p>
+
+<p>En nuestro ejemplo nos bajamos la iso <em>rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2_sg2d.iso</em>, la cual abrimos con algún software extractor como winrar o file roller (linux), y extraemos la imagen interna <em>rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2.iso</em>.</p>
+
+<p>Esta última imagen extraída es la que instalaremos con el YUMI.</p>
+
+<h3 id="huayra">Huayra</h3>
+
+<p>La opción a elegir en YUMI al instalar es <em>Try unlisted ISO (SYSLINUX)</em></p>
+
+<h3 id="otros">Otros…</h3>
+
+<hr />
+
+<h2 id="hackeo-para-permitir-el-booteo-uefi">3. “Hackeo” para permitir el booteo uefi</h2>
+
+<p>Extraemos el contenido del zip que bajamos en el punto 1 con el nombre <em>yumi_efi_raiz.zip</em>. Se extraerán entonces las carpetas <em>EFI</em> y <em>boot</em>. <strong>Atención:</strong> al extraer se crea una carpeta con el nombre del zip, y dentro las carpetas mencionadas. <strong>EFI y boot deben ser copiadas en la raiz del usb.</strong></p>
+
+<p>La carpeta <em>boot</em> contiene la subcarpeta <em>grub</em>, y dentro de ésta el archivo <em>grub.cfg</em>, al que llamaremos <em>raiz</em>.</p>
+
+<h3 id="editar-el-archivo-grubcfg-raiz">Editar el archivo grub.cfg raiz:</h3>
+
+<p>Este archivo será nuestro menú principal EFI, creando las entradas apuntando a los archivos <em>grub.cfg</em> específicos de cada instalación. 
+Cada vez que realicemos una instalación nueva debemos agregar la entrada correspondiente, prestando especial anteción a la ruta donde se encuentra el archivo al que se hace referencia.</p>
+
+<p>Ejemplo:</p>
+
+<p><em>Contenido del archivo [raiz_del_usb]/EFI/boot/grub.cfg</em></p>
+
+<pre><code>#para que bootee el clonezilla
+menuentry "Clonezilla" {
+	configfile /multiboot/clonezilla-live-2.4.2-32-amd64/EFI/boot/grub.cfg
+}
+
+#para que bootee el gparted
+menuentry "Gparted" {
+	configfile /multiboot/gparted-live-0.23.0-1-amd64/EFI/boot/grub.cfg
+}
+
+...
+</code></pre>
+
+<p><strong>Cuando el grub.cfg propio de la herramienta no existe</strong>, deberemos crear una entrada específica. Aquí están los <em>menuentry</em> correspondientes a Rescatux y Huayra:</p>
+
+<pre><code>#para que bootee el rescatux
+menuentry "Rescatux"{
+	search --set -f /multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live/vmlinuz
+	linux /multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live/vmlinuz boot=live ignore_bootid live-media-path=/multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live config   quiet
+	initrd /multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live/initrd.img }
+
+#para que bootee el huayra
+menuentry "Huayra 3.1 amd64" {
+	linux /multiboot/huayra-amd64-3.1-efi/live/vmlinuz noprompt live-media-path=/multiboot/huayra-amd64-3.1-efi/live  boot=live config file=/preseed.cfg language=es locales=es_AR.UTF-8 country=AR keyboard-layouts=es
+	initrd /multiboot/huayra-amd64-3.1-efi/live/initrd.img
+}
+
+...
+</code></pre>
+
+<p>El contenido del archivo <strong><em>/EFI/boot/grub.cfg</em></strong> queda entonces así:</p>
+
+<pre><code>menuentry "Clonezilla" {
+	configfile /multiboot/clonezilla-live-2.4.2-32-amd64/EFI/boot/grub.cfg
+}
+
+menuentry "Gparted" {
+	configfile /multiboot/gparted-live-0.23.0-1-amd64/EFI/boot/grub.cfg
+}
+
+menuentry "Rescatux"{
+	search --set -f /multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live/vmlinuz
+	linux /multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live/vmlinuz boot=live ignore_bootid live-media-path=/multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live config   quiet
+	initrd /multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live/initrd.img }
+
+menuentry "Huayra 3.1 amd64" {
+	linux /multiboot/huayra-amd64-3.1-efi/live/vmlinuz noprompt live-media-path=/multiboot/huayra-amd64-3.1-efi/live  boot=live config file=/preseed.cfg language=es locales=es_AR.UTF-8 country=AR keyboard-layouts=es
+	initrd /multiboot/huayra-amd64-3.1-efi/live/initrd.img
+}
+</code></pre>
+
+<h4 id="nota-utilizando-las-versiones-descritas-en-este-instructivo-el-archivo-grubcfg-ya-tiene-las-entradas-correspondientes-por-lo-que-no-sera-necesario-editarlo-con-solo-instalar-las-imgenes-y-extraer-las-carpetas-efi-y-boot-en-la-raiz-el-pendrive-estara-listo-para-usar">NOTA: Utilizando las versiones descritas en este instructivo, el archivo <em>grub.cfg</em> ya tiene las entradas correspondientes, por lo que no sería necesario editarlo. Con solo instalar las imágenes y extraer las carpetas EFI y boot en la raiz, el pendrive estaría listo para usar.</h4>
+
+<hr />
+
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
