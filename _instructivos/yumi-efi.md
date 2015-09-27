@@ -22,7 +22,7 @@ Testeadas en las netbooks EXO X352 (32 bits) y CORADIR CDR Class (64 bits uefi):
 
 * Bajar la última versión de [YUMI](http://www.pendrivelinux.com/yumi-multiboot-usb-creator/) para Windows (La versión para linux es problemática, no la recomiendo).
 
-* Bajar el siguiente archivo [yumi_raiz_efi](/ars-me-cba/public/archivos/yumi_efi_raiz.zip).
+* Bajar el siguiente archivo [yumi_efi_raiz](/ars-me-cba/public/archivos/yumi_efi_raiz.zip).
 
 ---
 
@@ -41,8 +41,6 @@ Esta última imagen extraída es la que instalaremos con el YUMI.
 ### Huayra
 
 La opción a elegir en YUMI al instalar es *Try unlisted ISO (SYSLINUX)*
-
-### Otros...
 
 ---
 
@@ -72,8 +70,6 @@ _Contenido del archivo [raiz_del_usb]/EFI/boot/grub.cfg_
 		configfile /multiboot/gparted-live-0.23.0-1-amd64/EFI/boot/grub.cfg
 	}
 
-	...
-
 
 **Cuando el grub.cfg propio de la herramienta no existe**, deberemos crear una entrada específica. Aquí están los *menuentry* correspondientes a Rescatux y Huayra:
 
@@ -90,7 +86,6 @@ _Contenido del archivo [raiz_del_usb]/EFI/boot/grub.cfg_
 		initrd /multiboot/huayra-amd64-3.1-efi/live/initrd.img
 	}
 
-	...
 
 El contenido del archivo **_/EFI/boot/grub.cfg_** queda entonces así:
 
@@ -106,7 +101,7 @@ El contenido del archivo **_/EFI/boot/grub.cfg_** queda entonces así:
 		search --set -f /multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live/vmlinuz
 		linux /multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live/vmlinuz boot=live ignore_bootid live-media-path=/multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live config   quiet
 		initrd /multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live/initrd.img
-}
+	}
 
 	menuentry "Huayra 3.1 amd64" {
 		linux /multiboot/huayra-amd64-3.1-efi/live/vmlinuz noprompt live-media-path=/multiboot/huayra-amd64-3.1-efi/live  boot=live config file=/preseed.cfg language=es locales=es_AR.UTF-8 country=AR keyboard-layouts=es
