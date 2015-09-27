@@ -24,7 +24,7 @@ Testeadas en las netbooks EXO X352 (32 bits) y CORADIR CDR Class (64 bits uefi):
 
 * Bajar el siguiente archivo [yumi_raiz_efi](https://drive.google.com/file/d/0B_pDv9cL1hOLRWJKOWlpaUFmb3M/view?usp=sharing).
 
-* Bajar el siguiente archivo [yumi_raiz_efi](/archivos/yumi_raiz_efi.zip).
+* Bajar el siguiente archivo [yumi_raiz_efi](archivos/yumi_raiz_efi.zip).
 
 ---
 
