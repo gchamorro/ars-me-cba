@@ -21,7 +21,11 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=-1
+current_page=2
+FILE_NAME_0=840;YAML;0;16;1;1;0;%2Fhome%2Fpelayi%2FDocumentos%2Fjekyll%2Fars-me-cba-lanyon%2F_config.yml;0;4
+FILE_NAME_1=86;HTML;0;16;1;1;0;%2Fhome%2Fpelayi%2FDocumentos%2Fjekyll%2Fars-me-cba-lanyon%2Finstructivos.html;0;4
+FILE_NAME_2=89;Markdown;0;16;1;1;0;%2Fhome%2Fpelayi%2FDocumentos%2Fjekyll%2Fars-me-cba-lanyon%2F_instructivos%2Fyumi-efi.md;0;4
+FILE_NAME_3=121;HTML;0;16;1;1;0;%2Fhome%2Fpelayi%2FDocumentos%2Fjekyll%2Fars-me-cba-lanyon%2F_layouts%2Finstructivo.html;0;4
 
 [VTE]
 last_dir=/home/pelayi

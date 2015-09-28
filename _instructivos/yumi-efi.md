@@ -1,6 +1,7 @@
 ---
 layout: instructivo
 title: Yumi EFI
+abstract: Instalar con yumi las versiones tanto de 32 bits como de 64 bits uefi de las herramientas que necesitamos, booteables en ambas arquitecturas en un único pendrive.
 ---
 
 # Iumi + uendous 8 (uefi) + rescatus + uaira
@@ -41,6 +42,8 @@ Esta última imagen extraída es la que instalaremos con el YUMI.
 ### Huayra
 
 La opción a elegir en YUMI al instalar es *Try unlisted ISO (SYSLINUX)*
+
+### Otros...
 
 ---
 

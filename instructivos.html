@@ -2,16 +2,28 @@
 layout: default
 title: Instructivos
 ---
-
+<h1>Instructivos</h1>
+<hr>
 <div class="posts">
   {% for inst in site.instructivos %}
   <div class="post">
-    <h1 class="post-title">
-      <a href="{{ site.baseurl }}{{ inst.url }}">
+    <h2 class="post-title">
+      <a href="{{ site.baseurl }}{{ inst.url }}" class="post-link">
         {{ inst.title }}
       </a>
-    </h1>
+    </h2>
+    <p class="post-abstract">{{ inst.abstract }}</p>
   </div>
+  <!--<hr>-->
   {% endfor %}
 </div>
+<style>
+	.post-link {
+	color: #3D7AB8 !important;
+	}
+	.post-abstract{
+		font-size: small;
+	}
+	</style>
+
 

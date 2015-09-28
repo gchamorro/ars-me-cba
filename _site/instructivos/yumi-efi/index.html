@@ -39,7 +39,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p></p>
+    <p>Made by <a href="https://github.com/gchamorro" target="_blank">G.Chamorro</a>.</p>
   </div>
 
   <nav class="sidebar-nav">
@@ -122,7 +122,7 @@
     <p>Bajar la última versión de <a href="http://www.pendrivelinux.com/yumi-multiboot-usb-creator/">YUMI</a> para Windows (La versión para linux es problemática, no la recomiendo).</p>
   </li>
   <li>
-    <p>Bajar el siguiente archivo <a href="https://drive.google.com/file/d/0B_pDv9cL1hOLRWJKOWlpaUFmb3M/view?usp=sharing">yumi_raiz_efi</a>.</p>
+    <p>Bajar el siguiente archivo <a href="/ars-me-cba/public/archivos/yumi_efi_raiz.zip">yumi_efi_raiz</a>.</p>
   </li>
 </ul>
 
@@ -172,8 +172,6 @@ menuentry "Clonezilla" {
 menuentry "Gparted" {
 	configfile /multiboot/gparted-live-0.23.0-1-amd64/EFI/boot/grub.cfg
 }
-
-...
 </code></pre>
 
 <p><strong>Cuando el grub.cfg propio de la herramienta no existe</strong>, deberemos crear una entrada específica. Aquí están los <em>menuentry</em> correspondientes a Rescatux y Huayra:</p>
@@ -189,8 +187,6 @@ menuentry "Huayra 3.1 amd64" {
 	linux /multiboot/huayra-amd64-3.1-efi/live/vmlinuz noprompt live-media-path=/multiboot/huayra-amd64-3.1-efi/live  boot=live config file=/preseed.cfg language=es locales=es_AR.UTF-8 country=AR keyboard-layouts=es
 	initrd /multiboot/huayra-amd64-3.1-efi/live/initrd.img
 }
-
-...
 </code></pre>
 
 <p>El contenido del archivo <strong><em>/EFI/boot/grub.cfg</em></strong> queda entonces así:</p>
@@ -206,7 +202,8 @@ menuentry "Gparted" {
 menuentry "Rescatux"{
 	search --set -f /multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live/vmlinuz
 	linux /multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live/vmlinuz boot=live ignore_bootid live-media-path=/multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live config   quiet
-	initrd /multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live/initrd.img }
+	initrd /multiboot/rescatux_cdrom_usb_hybrid_i386_amd64-486_0.30.2/live/initrd.img
+}
 
 menuentry "Huayra 3.1 amd64" {
 	linux /multiboot/huayra-amd64-3.1-efi/live/vmlinuz noprompt live-media-path=/multiboot/huayra-amd64-3.1-efi/live  boot=live config file=/preseed.cfg language=es locales=es_AR.UTF-8 country=AR keyboard-layouts=es
@@ -220,6 +217,21 @@ menuentry "Huayra 3.1 amd64" {
 
 
 </div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'ars-me-cba';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
 
       </div>
     </div>
