@@ -25,6 +25,10 @@ Testeadas en las netbooks EXO X352 (32 bits) y CORADIR CDR Class (64 bits uefi):
 
 * Bajar el siguiente archivo [yumi_efi_raiz](/ars-me-cba/public/archivos/yumi_efi_raiz.zip).
 
+* Bajar el [clonezilla.cfg para el clonezilla](/ars-me-cba/public/archivos/clonezilla.cfg).
+
+* Bajar el [gparted.cfg para el gparted](/ars-me-cba/public/archivos/gparted.cfg).
+
 ---
 
 ## 2. Instalación
@@ -42,8 +46,6 @@ Esta última imagen extraída es la que instalaremos con el YUMI.
 ### Huayra
 
 La opción a elegir en YUMI al instalar es *Try unlisted ISO (SYSLINUX)*
-
-### Otros...
 
 ---
 
@@ -65,14 +67,24 @@ _Contenido del archivo [raiz_del_usb]/EFI/boot/grub.cfg_
 
 	#para que bootee el clonezilla
 	menuentry "Clonezilla" {
-		configfile /multiboot/clonezilla-live-2.4.2-32-amd64/EFI/boot/grub.cfg
+		configfile /multiboot/clonezilla-live-2.4.2-32-amd64/EFI/boot/clonezilla.cfg
 	}
 
 	#para que bootee el gparted
 	menuentry "Gparted" {
-		configfile /multiboot/gparted-live-0.23.0-1-amd64/EFI/boot/grub.cfg
+		configfile /multiboot/gparted-live-0.23.0-1-amd64/EFI/boot/gparted.cfg
 	}
 
+### Reemplazar los grub.cfg propios de cada herramienta
+
+#### Clonezilla
+
+Copiar para el clonezilla el archivo [clonezilla.cfg](/ars-me-cba/public/archivos/clonezilla.cfg) en el directorio _/multiboot/[directorio_clonezilla]/EFI/boot/_
+
+
+#### Gparted
+
+Copiar para el gparted el archivo [gparted.cfg](/ars-me-cba/public/archivos/gparted.cfg) en el directorio _/multiboot/[directorio_gparted]/EFI/boot/_
 
 **Cuando el grub.cfg propio de la herramienta no existe**, deberemos crear una entrada específica. Aquí están los *menuentry* correspondientes a Rescatux y Huayra:
 
@@ -90,14 +102,14 @@ _Contenido del archivo [raiz_del_usb]/EFI/boot/grub.cfg_
 	}
 
 
-El contenido del archivo **_/EFI/boot/grub.cfg_** queda entonces así:
+#### El contenido del archivo **_/EFI/boot/grub.cfg_** queda entonces así:
 
 	menuentry "Clonezilla" {
-		configfile /multiboot/clonezilla-live-2.4.2-32-amd64/EFI/boot/grub.cfg
+		configfile /multiboot/clonezilla-live-2.4.2-32-amd64/EFI/boot/clonezilla.cfg
 	}
 
 	menuentry "Gparted" {
-		configfile /multiboot/gparted-live-0.23.0-1-amd64/EFI/boot/grub.cfg
+		configfile /multiboot/gparted-live-0.23.0-1-amd64/EFI/boot/gparted.cfg
 	}
 
 	menuentry "Rescatux"{
@@ -112,7 +124,7 @@ El contenido del archivo **_/EFI/boot/grub.cfg_** queda entonces así:
 	}
 
 
-#### NOTA: Utilizando las versiones descritas en este instructivo, el archivo _grub.cfg_ ya tiene las entradas correspondientes, por lo que no sería necesario editarlo. Con solo instalar las imágenes y extraer las carpetas EFI y boot en la raiz, el pendrive estaría listo para usar.
+#### NOTA: Utilizando las versiones descritas en este instructivo, el archivo _grub.cfg_ ya tiene las entradas correspondientes, por lo que no sería necesario editarlo. Con solo instalar las imágenes y extraer las carpetas EFI y boot en la raiz, copiar los .cfg del clonezilla y gparted en sus carpetas EFI respectivas, el pendrive estaría listo para usar.
 
 ---
 
