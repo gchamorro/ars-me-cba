@@ -24,9 +24,9 @@ Testeadas en las netbooks EXO X352 (32 bits) y CORADIR CDR Class (64 bits uefi):
 
 * Bajar el siguiente archivo [yumi_efi_raiz](/ars-me-cba/public/archivos/yumi_efi_raiz.zip).
 
-* Bajar el [grub.cfg para el clonezilla](/ars-me-cba/public/archivos/grub.cfg.clonezilla).
+* Bajar el [clonezilla.cfg para el clonezilla](/ars-me-cba/public/archivos/clonezilla.cfg).
 
-* Bajar el [grub.cfg para el gparted](/ars-me-cba/public/archivos/grub.cfg.gparted).
+* Bajar el [gparted.cfg para el gparted](/ars-me-cba/public/archivos/gparted.cfg).
 
 ---
 
