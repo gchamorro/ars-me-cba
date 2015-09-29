@@ -1,8 +1,12 @@
 ---
 layout: default
+crumb_title: Instructivos
+crumb_url: instructivos
 ---
 
 <div class="post">
   <!--<h1 class="post-title">{{ page.title }}</h1>-->
   {{ content }}
 </div>
+
+{% include disqus.html %}
