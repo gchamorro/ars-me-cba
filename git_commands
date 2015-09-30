@@ -1,2 +1,0 @@
-git add --all; git commit -m "Updating site"; git push -u origin gh-pages
-

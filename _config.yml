@@ -25,3 +25,6 @@ collections:
   instructivos:
     output: true
     permalink: /instructivos/:path/
+    
+gems:
+  - jekyll-redirect-from
