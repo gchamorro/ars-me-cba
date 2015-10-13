@@ -28,7 +28,6 @@
 	<script src="{{ site.baseurl }}/public/js/jquery-1.11.0.min.js"></script>
 	<script src="{{ site.baseurl }}/public/js/slick.min.js"></script>
 	<script src="{{ site.baseurl }}/public/js/jquery.scrollUp.min.js"></script>
-	<script src="{{ site.baseurl }}/public/js/default.js"></script>
     <script>
       (function(document) {
         var toggle = document.querySelector('.sidebar-toggle');
