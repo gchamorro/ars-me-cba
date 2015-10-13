@@ -1,4 +1,13 @@
-# YUMI efi v1.0
+---
+layout: instructivo
+title: YUMI efi
+redirect_from:
+  - /instructivos/yumi-efi-v1.0/
+abstract: Instalar con YUMI las versiones tanto de 32 bits como de 64 bits efi de las herramientas que necesitamos, booteables en ambas arquitecturas en un único pendrive.
+---
+
+
+# YUMI efi
 
 Instalar con YUMI las versiones tanto de 32 bits como de 64 bits efi de las herramientas que necesitamos, booteables en ambas arquitecturas en un único pendrive.
 
@@ -27,6 +36,8 @@ Instalar con YUMI las versiones tanto de 32 bits como de 64 bits efi de las herr
 - [Preguntas frecuentes](#preguntas-frecuentes)
 
 - [Problemas conocidos](#problemas-conocidos)
+
+- [Saber más](#saber-mas)
 
 ---
 

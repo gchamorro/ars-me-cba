@@ -13,8 +13,8 @@ detect_indent_width=false
 indent_mode=2
 
 [project]
-name=ars-me-cba-lanyon
-base_path=/home/pelayi/Documentos/jekyll/ars-me-cba-lanyon
+name=ars-me-cba
+/home/pelayi/Documentos/git/ars-me-cba
 description=
 
 [long line marker]
@@ -27,9 +27,8 @@ FILE_NAME_0=370;YAML;0;16;1;1;1;%2Fhome%2Fpelayi%2FDocumentos%2Fjekyll%2Fars-me-
 FILE_NAME_1=390;HTML;0;16;1;1;0;%2Fhome%2Fpelayi%2FDocumentos%2Fjekyll%2Fars-me-cba-lanyon%2Finstructivos.html;0;4
 FILE_NAME_2=179;HTML;0;16;1;1;0;%2Fhome%2Fpelayi%2FDocumentos%2Fjekyll%2Fars-me-cba-lanyon%2F_layouts%2Finstructivo.html;0;4
 FILE_NAME_3=172;HTML;0;16;1;1;1;%2Fhome%2Fpelayi%2FDocumentos%2Fjekyll%2Fars-me-cba-lanyon%2F_includes%2Fbreadcrumbs.html;0;4
-FILE_NAME_4=555;Markdown;0;16;1;1;0;%2Fhome%2Fpelayi%2FDocumentos%2Fjekyll%2Fars-me-cba-lanyon%2F_instructivos%2Fyumi-efi.md;0;4
-FILE_NAME_5=194;Conf;0;16;1;1;0;%2Fhome%2Fpelayi%2FDocumentos%2Fjekyll%2Fars-me-cba-lanyon%2Fpublic%2Farchivos%2Fclonezilla.cfg;0;4
-FILE_NAME_6=0;Conf;0;16;1;1;0;%2Fhome%2Fpelayi%2FDocumentos%2Fjekyll%2Fars-me-cba-lanyon%2Fpublic%2Farchivos%2Fgparted.cfg;0;4
+FILE_NAME_4=194;Conf;0;16;1;1;0;%2Fhome%2Fpelayi%2FDocumentos%2Fjekyll%2Fars-me-cba-lanyon%2Fpublic%2Farchivos%2Fclonezilla.cfg;0;4
+FILE_NAME_5=0;Conf;0;16;1;1;0;%2Fhome%2Fpelayi%2FDocumentos%2Fjekyll%2Fars-me-cba-lanyon%2Fpublic%2Farchivos%2Fgparted.cfg;0;4
 
 [VTE]
 last_dir=/home/pelayi
